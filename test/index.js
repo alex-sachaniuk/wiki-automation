@@ -65,7 +65,7 @@ let webdriver = require('selenium-webdriver'),
 			await driver.quit();
 		});
 
-		it('Verify that "Family" heading is used as heading on the page', async () => {
+		it('Verify that "Family" hyperlink works as expected', async () => {
 			await driver.findElement(By.xpath('//*[@id="toc"]/ul/li[1]/a')).click();
 			let currentURL = await driver.getCurrentUrl().then(async url => {
 				return(await url.toString());
@@ -73,7 +73,7 @@ let webdriver = require('selenium-webdriver'),
 			assert.equal(currentURL, 'https://en.wikipedia.org/wiki/Metis_(mythology)#Family');
 		});
 
-		it('Verify that "Mythology" heading is used as heading on the page', async () => {
+		it('Verify that "Mythology" hyperlink works as expected', async () => {
 			await driver.findElement(By.xpath('//*[@id="toc"]/ul/li[2]/a')).click();
 			let currentURL = await driver.getCurrentUrl().then(async url => {
 				return(await url.toString());
@@ -81,7 +81,7 @@ let webdriver = require('selenium-webdriver'),
 			assert.equal(currentURL, 'https://en.wikipedia.org/wiki/Metis_(mythology)#Mythology');
 		});
 
-		it('Verify that "Honours" heading is used as heading on the page', async () => {
+		it('Verify that "Honours" hyperlink works as expected', async () => {
 			await driver.findElement(By.xpath('//*[@id="toc"]/ul/li[3]/a')).click();
 			let currentURL = await driver.getCurrentUrl().then(async url => {
 				return(await url.toString());
@@ -89,7 +89,7 @@ let webdriver = require('selenium-webdriver'),
 			assert.equal(currentURL, 'https://en.wikipedia.org/wiki/Metis_(mythology)#Honours');
 		});
 
-		it('Verify that "References" heading is used as heading on the page', async () => {
+		it('Verify that "References" hyperlink works as expected', async () => {
 			await driver.findElement(By.xpath('//*[@id="toc"]/ul/li[4]/a')).click();
 			let currentURL = await driver.getCurrentUrl().then(async url => {
 				return(await url.toString());
@@ -97,7 +97,7 @@ let webdriver = require('selenium-webdriver'),
 			assert.equal(currentURL, 'https://en.wikipedia.org/wiki/Metis_(mythology)#References');
 		});
 
-		it('Verify that "See also" heading is used as heading on the page', async () => {
+		it('Verify that "See also" hyperlink works as expected', async () => {
 			await driver.findElement(By.xpath('//*[@id="toc"]/ul/li[5]/a')).click();
 			let currentURL = await driver.getCurrentUrl().then(async url => {
 				return(await url.toString());
@@ -105,7 +105,7 @@ let webdriver = require('selenium-webdriver'),
 			assert.equal(currentURL, 'https://en.wikipedia.org/wiki/Metis_(mythology)#See_also');
 		});
 
-		it('Verify that "Further reading" heading is used as heading on the page', async () => {
+		it('Verify that "Further reading" hyperlink works as expected', async () => {
 			await driver.findElement(By.xpath('//*[@id="toc"]/ul/li[6]/a')).click();
 			let currentURL = await driver.getCurrentUrl().then(async url => {
 				return(await url.toString());
